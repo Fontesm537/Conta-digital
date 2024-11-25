@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank SE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="topo">
+        <div class="logo">
+            <img src="icon_pix_.png" alt="Logo Bank SE" class="logo-img">
+            <h1>Bank <span>SE</span></h1>
+        </div>
+        <div class="usuario">
+            <p>Olá, Fulano</p>
+            <img src="icon_user_.png" alt="Ícone Usuário" class="icon-usuario">
+        </div>
+    </header>
+    <main class="principal">
+        <div class="container">
+            <!-- Área de Conta -->
+            <section class="conta">
+                <div class="box-saldo">
+                    <h2>Conta</h2>
+                    <p id="saldo">R$ <span>0,00</span></p>
+                </div>
+                <div class="box-entradas-saidas">
+                    <div class="box">
+                        <h3>Entradas</h3>
+                        <p id="entradas">R$ <span>0,00</span></p>
+                    </div>
+                    <div class="box">
+                        <h3>Saídas</h3>
+                        <p id="saidas" class="saida">R$ <span>0,00</span></p>
+                    </div>
+                </div>
+            </section>
+            <!-- Área de Publicidade -->
+            <section class="publicidade">
+                <img src="img_seguros.png" alt="Publicidade Seguros para Família" class="banner-seguros">
+            </section>
+            <!-- Área de Transações -->
+            <section class="transacoes">
+                <h2>Últimas transações</h2>
+                <div id="lista-transacoes">
+                    <p>Não constam transações.</p>
+                </div>
+            </section>
+            <!-- Área de Ações -->
+            <section class="acoes">
+                <button id="pix" class="btn-acoes"><img src="icon_pix_.png" alt="PIX">Área PIX</button>
+                <button id="pagar" class="btn-acoes"><img src="icon_dollar_.png" alt="Pagar">Pagar</button>
+                <button id="investir" class="btn-acoes"><img src="icon_graph_.png" alt="Investir">Investir</button>
+            </section>
+            <!-- Área PIX -->
+            <section id="pix-area" style="display: none;">
+                <h3>Área PIX</h3>
+                <div class="pix-opcoes">
+                    <button id="aba-receber" class="active">Receber</button>
+                    <button id="aba-transferir">Transferir</button>
+                </div>
+                <div id="form-receber">
+                    <form id="receber-form">
+                        <label for="cpf-cnpj">CNPJ/CPF</label>
+                        <input type="text" id="cpf-cnpj" placeholder="000.000.000-00" required>
+                        <label for="valor-receber">Valor R$</label>
+                        <input type="number" id="valor-receber" placeholder="R$ 10,00" required>
+                        <p id="erro-receber" class="erro">Todos os campos devem ser preenchidos!</p>
+                        <button type="submit" class="btn-submit">Receber</button>
+                    </form>
+                </div>
+                <div id="form-transferir" style="display: none;">
+                    <form id="transferir-form">
+                        <label for="chave-pix">Chave PIX</label>
+                        <input type="text" id="chave-pix" placeholder="Digite a chave PIX" required>
+                        <label for="valor-transferir">Valor R$</label>
+                        <input type="number" id="valor-transferir" placeholder="R$ 10,00" required>
+                        <p id="erro-transferir" class="erro">Todos os campos devem ser preenchidos!</p>
+                        <button type="submit" class="btn-submit">Transferir</button>
+                    </form>
+                </div>
+            </section>
+            <!-- Área Pagar -->
+            <section id="pagar-area" style="display: none;">
+                <h3>Pagar</h3>
+                <div class="sistema-indisponivel">
+                    <p>Sistema indisponível.<br>Tente novamente mais tarde.</p>
+                </div>
+            </section>
+            <!-- Área Investir -->
+            <section id="investir-area" style="display: none;">
+                <h3>Investir</h3>
+                <div class="sistema-indisponivel">
+                    <p>Sistema indisponível.<br>Tente novamente mais tarde.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 BankSE - Desenvolvido por: Gabriel Fontes</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
